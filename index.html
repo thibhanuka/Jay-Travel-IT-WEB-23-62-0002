@@ -1,0 +1,414 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IT/WEB/23/62/0002</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Open+Sans:wght@300&family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        .img-main {
+            width: 100%;
+            height: 600px;
+            object-fit: cover; 
+            overflow: hidden;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 70%;
+            object-fit:cover; 
+            display: inline-flex;   
+        }
+
+        @font-face {
+            font-family: 'Gabriola';
+            src: url('font/Gabriola.ttf') format('truetype');
+            }
+
+        a {
+            text-decoration: none;
+            color: rgb(116, 165, 240);
+        }
+
+        .card-border-cus {
+            
+            border-bottom: 5px solid rgb(116, 165, 240);
+        }
+
+        .placeh::placeholder {
+            color: rgb(163, 163, 163);
+        }
+
+        .button {
+            white-space:nowrap;
+        }
+
+        .foot {
+            color: rgb(213, 213, 213);
+            background-color: rgb(0, 36, 52);
+            font-family: 'Open Sans', sans-serif;
+            font-size: xx-small;
+        }
+
+        .contact h5 {
+            font-size:x-small;
+        }
+
+      
+
+
+    </style>
+
+    <script>
+        function validate() {
+            const firstN = document.getElementById('firstN').value.trim();
+            const lastN = document.getElementById('lastN').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phoneN = document.getElementById('phoneN').value.trim();
+
+            const checkDigits = /\d/;
+            const checkEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const checkPhone = /^\d+$/;
+
+            if (firstN === '' || lastN === '') {
+                alert('Please enter both first name and last name.');
+                return;
+            }
+
+            if (checkDigits.test(firstN)) {
+                alert('First name should not contain numbers.');
+                return;
+            }
+
+            if (checkDigits.test(lastN)) {
+                alert('Last name should not contain numbers.');
+                return;
+            }
+
+            if (!checkEmail.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+
+            if (!checkPhone.test(phoneN)) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+
+            alert('Submitted successfully!');
+        }
+    </script>
+
+  </head>
+
+  <body>
+
+    <header>
+    <nav class="navbar navbar-expand-lg bg-black px-5 nav ">
+        <div class="container-fluid nav">
+          <a class="navbar-brand fw-bold fs-1" style="font-family: 'Gabarito', cursive;color: orangered;" href="#">JAY TOURS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" style="color: orangered;" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="services.html">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="testamonials.html">TESTIMONIALS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="portfolio.html">PORTFOLIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="contacts.html">CONTACTS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div>
+        <img src="images\main.jpg" class="img-fluid img-main" alt="beach">
+    </div>
+    </header>
+
+    <div class="container">
+        <div class="text-center pt-5">
+            <h1 class="fw-normal fs-1" style="color: rgb(255, 80, 4);font-family: 'Poppins', sans-serif;">TOP DESTINATIONS</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid py-2">
+        <div class="row d-flex justify-content-center text-center text-secondary">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center">
+                <h3 class="py-1 fs-5">SRI LANKA</h3>
+                <div class="image-container d-flex justify-content-center">
+                    <img src="images\Top Destinations\Sri Lanka.jpg" class="img-fluid" alt="Sri Lanka">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center">
+                <h3 class="py-1 fs-5">ROME</h3>
+                <div class="image-container d-flex justify-content-center">
+                    <img src="images\Top Destinations\Rome.jpg" class="img-fluid" alt="Rome">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center">
+                <h3 class="py-1 fs-5">MALDIVES</h3>
+                <div class="image-container d-flex justify-content-center">
+                    <img src="images\Top Destinations\Maldives.jpg" class="img-fluid" alt="Maldives">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center">
+                <h3 class="py-1 fs-5">SWITZERLAND</h3>
+                <div class="image-container d-flex justify-content-center">
+                    <img src="images\Top Destinations\Switzerland.jpg" class="img-fluid" alt="Switzerland">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12 text-center">
+                <h3 class="py-1 fs-5">THAILAND</h3>
+                <div class="image-container d-flex justify-content-center">
+                    <img src="images\Top Destinations\Thailand.jpg" class="img-fluid" alt="Thailand">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center pt-5">
+                <h1 class="fw-normal fs-1" style="color: rgb(255, 80, 4);font-family: 'Poppins', sans-serif;">OUR TEAM LEADS</h1>
+            </div>
+        </div>
+        
+        <div class="row d-flex justify-content-center fw-bold">
+            <div class="col-8 text-center">
+            <p class="lh-1 pt-2 fs-5">Teamwork is the ability to work together towards a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 text-center">
+                
+                <div class="image-container-2 d-flex justify-content-center">
+                    <img src="images\Team Leaders\Hugo Silva.jpg" class="img-fluid border border-bottom-0" alt="Hugo Silva">
+                </div>
+                <h5 class="pt-1 fs-3">Hugo Silva</h5>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 text-center">
+                
+                <div class="image-container-2 d-flex justify-content-center">
+                    <img src="images\Team Leaders\Imanoli Arias.jpg" class="img-fluid border border-bottom-0" alt="Imanoli Arias">
+                </div>
+                <h5 class="pt-1 fs-3">Imanoli Arias</h5>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 text-center">
+                
+                <div class="image-container-2 d-flex justify-content-center">
+                    <img src="images\Team Leaders\Javier Bardem.jpg" class="img-fluid border border-bottom-0" alt="Javier Bardem">
+                </div>
+                <h5 class="pt-1 fs-3">Javier Bardem</h5>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid bar sty" style="background-color: rgb(0, 36, 52);">
+        <div class="container py-5">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 justify-content-center text-center">
+                <h1 style="font-family: Gabriola, sans-serif; color: rgb(255, 80, 4); font-size: 80px; white-space:nowrap;">250k +</h1>
+                <h6 style="color: rgb(214, 214, 214);">HAPPY CLIENTS</h6>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 justify-content-center text-center">
+                <h1 style="font-family: Gabriola, sans-serif; color: rgb(255, 80, 4); font-size: 80px;">800</h1>
+                <h6 style="color: rgb(214, 214, 214);">WEEKLY RESERVATIONS</h6>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 justify-content-center text-center">
+                <h1 style="font-family: Gabriola, sans-serif; color: rgb(255, 80, 4); font-size: 80px;">150</h1>
+                <h6 style="color: rgb(214, 214, 214);">TRAVEL PARTNERS</h6>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 justify-content-center text-center">
+                <h1 style="font-family: Gabriola, sans-serif; color: rgb(255, 80, 4); font-size: 80px;">15</h1>
+                <h6 style="color: rgb(214, 214, 214);">BRANCHES</h6>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <div class="text-center pt-5">
+            <h1 class="fw-normal fs-1" style="color: rgb(255, 80, 4);font-family: 'Poppins', sans-serif;">OVERHEAD FROM TRAVELLERS</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center cards">
+
+            <div class="col-xl-4 col-lg-6 col-md-12 pt-4 ">
+                <div class="card card-border-cus rounded-0 w-100">
+                    <div class="card-body border-bottom-primary">
+                      <h5 class="card-title text-center" style="color: rgb(116, 165, 240);">Hotel Eucalyptus</h5>
+                      <h6 class="card-subtitle mb-2 text-body-tertiary text-center">in Greece</h6>
+                      <p class="card-text fw-bold text-center">"We booked Hotel Eucalyptus through Jay after reading a handful of reviews, and it was easily the best decision we made<br><span ><a href="#">...more</a></span>"</p>
+                      <h6 class="card-subtitle mb-2 text-body-secondary text-center">- Joyce from Canada</h6>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-12 pt-4 ">
+                <div class="card card-border-cus rounded-0 w-100">
+                    <div class="card-body border-bottom-primary">
+                      <h5 class="card-title text-center" style="color: rgb(116, 165, 240);">Holiday Inn Resort Batam</h5>
+                      <h6 class="card-subtitle mb-2 text-body-tertiary text-center">in Indonesia</h6>
+                      <p class="card-text fw-bold text-center"><br>"Thanks Jay for letting me change room without charge and rebate the differance. Nice staffs Agoda and Holiday Inn!"</p>
+                      <h6 class="card-subtitle mb-2 text-body-secondary text-center">- Andy from Singapore</h6>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 pt-4 ">
+                <div class="card card-border-cus rounded-0 w-100">
+                    <div class="card-body border-bottom-primary">
+                      <h5 class="card-title text-center" style="color: rgb(116, 165, 240);">Hotel Granvia Kyoto</h5>
+                      <h6 class="card-subtitle mb-2 text-body-tertiary text-center">in Japan</h6>
+                      <p class="card-text fw-bold text-center">"Our family was travelling via bullet train between cities in Japan with our luggage - the location for this hotel made that<br><span ><a href="#">...more</a></span>"</p>
+                      <h6 class="card-subtitle mb-2 text-body-secondary text-center">- Diane from the United States</h6>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center pt-5">
+                <h1 class="fw-normal fs-1" style="color: rgb(255, 80, 4);font-family: 'Poppins', sans-serif;">CONTACT US</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-4 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-6 ">
+                <div class="row g-5 ">
+                    <div class="col">
+                      <input type="text" id="firstN" class="form-control placeh" placeholder="First name" aria-label="First name">
+                    </div>
+                    <div class="col">
+                      <input type="text" id="lastN" class="form-control placeh" placeholder="Last name" aria-label="Last name">
+                    </div>
+                </div>
+
+                <div class="row pt-4">
+                    <div class="col">
+                      <input type="text" id="email" class="form-control placeh" placeholder="E-mail" aria-label="E-mail">
+                    </div>
+                </div>
+
+                <div class="row pt-4">
+                    <div class="col">
+                      <input type="text" id="phoneN" class="form-control placeh" placeholder="Phone Number" aria-label="Phone Number">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center pt-4">
+                    <div class="col form-check d-flex justify-content-center align-items-center">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault" style="padding-left: 10px;">Subscribe to our newsletter</label>
+                    </div>
+                </div>
+
+                <div class="row pt-4">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <button type="button" class="btn btn-info py-1 button" style="--bs-btn-padding-x: 120px;--bs-btn-font-size: 1.25rem; --bs-btn-color:white;" onclick="validate()">SIGN IN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="padding-top: 2%;">
+        <section class="container-fluid foot">
+            <div class="container">
+                <div class="row pt-5 pb-5">
+                    <div class="col">
+                        <h6>HELP</h6>
+                        <h6 class="pt-3">Help Center</h6>
+                        <h6>FAQs</h6>
+                        <h6>Terms of Use</h6>
+                    </div>
+                    <div class="col">
+                        <h6>ABOUT US</h6>
+                        <h6 class="pt-3">Blog</h6>
+                        <h6>Careers</h6>
+                    </div>
+                    <div class="col">
+                        <h6>DESTINATIONS</h6>
+                        <h6 class="pt-3">Countries</h6>
+                        <h6>Cities</h6>
+                    </div>
+                    <div class="col">
+                        <h6>PARTNER WITH US</h6>
+                        <h6 class="pt-3">Properties</h6>
+                        <h6>Affiliates</h6>
+                    </div>
+                    <div class="col">
+                        <div class="row contact">
+                            <div class="col-2 d-flex align-items-center">
+                                <i class="fa-solid fa-phone fs-6 text-danger"></i>
+                            </div>
+                            <div class="col-10">
+                                <h5>+94 112 875 965</h5>
+                                <h5>+94 115 879 568</h5>
+                            </div>
+                        </div>
+
+                        <div class="row contact">
+                            <div class="col-2 d-flex align-items-center">
+                                <i class="fa-solid fa-location-dot fs-6 text-danger"></i>
+                            </div>
+                            <div class="col-10">
+                                <h5>No.056,<br>Havlock Town,<br>Colombo 05<br>Sri Lanka</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section  class="container-fluid bg-black foot d-flex justify-content-center align-items-center py-4">
+            <h6>Copyright © 2020 - SLIIT WEB DEVELOPMENT - All right reserved</h6>
+        </section>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  </body>
+</html>
